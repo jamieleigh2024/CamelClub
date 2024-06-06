@@ -16,9 +16,13 @@ class Camel:
         if isinstance(drink_type, Champagne):
             self.champagne_bottles.sell_champagne()
 
-    def guest_arrives(self):
-        self.money_gbp += self.entrance_fee
-        self.guests += 1
+    def guest_arrives(self, age):
+        if age < 18:
+            return print("Guest not permitted due to age")
+
+        elif age >= 18:
+            self.money_gbp += self.entrance_fee
+            self.guests += 1
 
     def guest_leaves(self):
         self.guests -= 1
@@ -26,7 +30,7 @@ class Camel:
 
 class Bottle:
     """
-    This class represents all the bottles at Camel Club, 4
+    This class represents all the bottles at Camel Club.
     """
     def __init__(self):
         self.vk_bottles = 1200
