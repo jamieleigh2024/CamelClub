@@ -1,4 +1,7 @@
 class Camel:
+    """
+    This class represents Camel Club, Huddersfield, UK
+    """
 
     def __init__(self):
         self.guests = 0
