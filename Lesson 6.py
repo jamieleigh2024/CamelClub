@@ -25,6 +25,9 @@ class Camel:
 
 
 class Bottle:
+    """
+    This class represents all the bottles at Camel Club
+    """
     def __init__(self):
         self.vk_bottles = 1200
         self.champagne_bottles = 1200
